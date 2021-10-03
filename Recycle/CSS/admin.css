@@ -1,0 +1,21 @@
+.progress{
+	height: 4px;
+}
+.big{
+	font-size: 18px;
+}
+.edit{
+	color: #2bcb4f;
+}
+.search{
+	font-size: 20px; 
+	border-color: #28a745;
+	border-radius:24px;
+	text-align: center;
+}
+
+.name , .position , .gender{
+text-transform: capitalize;
+}
+
+

@@ -1,0 +1,235 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    /* overflow: hidden; */
+}
+
+/*loading screen*/
+/* #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #22aa86;
+}
+.spinner {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .spinner > div {
+    background-color: #fff;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  } */
+/*end loading screen*/
+
+/*angle-up*/
+.angle {
+    display: none;
+}
+
+.angle-up {
+    background-color: #22aa86;
+    font-size: 0.9rem;
+    bottom: 3%;
+    right: 2%;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+}
+@media screen and (max-width: 800px){
+    .angle-up{
+        bottom: 12%;
+    }
+}
+/*end angle-up*/
+
+/*side bar*/
+#sideBar{
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    z-index: 2;
+}
+#colorsBox{
+    padding: 15px;
+}
+.color-item{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+#colorsBox .one {
+    background-color: #181626;
+}
+#colorsBox .two {
+    background-color: #BA120E;
+}
+#colorsBox .three {
+    background-color: #555;
+}
+#colorsBox .four {
+    background-color: #027368;
+}
+#sideBarToggle{
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+
+}
+/*end side bar*/
+
+.titel h2{
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+}
+.lite{
+    font-weight: 900;
+    font-size: 90px;
+    color: #e2dfdf ;
+}
+.text-color{
+    color:  #495057;
+}
+.bg-color{
+    background-color:  #22aa86;
+}
+form{
+    border: 1px #fff solid;
+    border-radius: 20px;
+}
+.bg-image{
+    background-image: url(../Images/DM_20210405150911_001.jfif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+}
+.layer{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/*contact section*/
+.contact .left .text, .contact .left .caption .secP {
+    font-size: 0.8rem;
+}
+.contact .left i {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.contact .left .phone {
+    background-color: #9CC026;
+    transform: rotate(90deg);
+}
+.contact .left .clock {
+    background-color: #22aa86;
+}
+.contact .left .map {
+    background-color: #44514e;
+}
+.contact .right ::placeholder, .contact .right textarea {
+    font-size: 0.8rem;
+}
+.contact .right input {
+    padding: 25px 20px;
+    border-radius: 2px !important;
+}
+.contact .right textarea {
+    border-radius: 2px !important;
+}
+.contact .right .btn {
+    background-color: #22aa86;
+    padding: 10px 20px;
+}
+.contact .right .btn:hover {
+    background-color: #1e9777;
+}
+.tabs img {
+    width: 250px;
+    height: 250px;
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.tabs .btn {
+    background-color: #22aa86;
+}
+.tabs .left {
+    padding-top: 7px;
+}
+.upload-btn-wrapper input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+/*end contact*/
+
+/*footer*/
+footer .copy p, footer .copy span {
+    font-size: 0.75rem;
+}
+footer .copy .icons a {
+    z-index: 3;
+    text-decoration: none;
+}
+footer .copy .icons i {
+    width: 35px;
+    height: 35px;
+    margin-left: 2px;
+    background-color: #44514e;
+    cursor: pointer;
+}
+/*end footer*/

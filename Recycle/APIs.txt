@@ -1,0 +1,56 @@
+1- Get All Users
+http://localhost/Recycle/usersAPI.php
+Method: GET
+
+
+2- Get User Data
+http://localhost/Recycle/getUserAPI.php?id=16
+Method: GET
+
+
+3- Get All Requests
+http://localhost/Recycle/requestsAPI.php
+Method: GET
+
+
+4- Get Request Data
+http://localhost/Recycle/getRequestAPI.php?id=16
+Method: GET
+
+
+5- Register
+http://localhost/Recycle/postUserAPI.php
+Method: POST
+
+
+6- Update Profile
+http://localhost/Recycle/updateAPI.php
+Method: POST
+
+
+7- Make Request 
+http://localhost/Recycle/postRequestAPI.php
+Method: POST
+
+
+8- Delete Request
+http://localhost/Recycle/deleteRequestAPI.php
+Method: POST
+
+
+9- Contact Form
+http://localhost/Recycle/postContactAPI.php
+Method: POST
+
+
+10- Governorates API
+http://localhost/Recycle/citiesAPI/governorates.json
+Method: GET
+
+
+11- Cities API
+http://localhost/Recycle/citiesAPI/cities.json
+Method: GET
+
+
+POST APIs receives the data as FormData().

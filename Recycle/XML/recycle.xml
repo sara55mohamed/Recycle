@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.9.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Apr 27, 2021 at 11:04 PM
+- Server version: 10.4.8-MariaDB
+- PHP Version: 7.2.24
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="recycle" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="customer">
+                CREATE TABLE `customer` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `first_name` varchar(100) NOT NULL,
+                  `last_name` varchar(100) NOT NULL,
+                  `email` varchar(100) NOT NULL,
+                  `password` varchar(100) NOT NULL,
+                  `address` varchar(100) NOT NULL,
+                  `city` varchar(100) NOT NULL,
+                  `area` varchar(100) NOT NULL,
+                  `zip` int(100) NOT NULL,
+                  `phone` varchar(20) NOT NULL,
+                  `image` varchar(100) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="product">
+                CREATE TABLE `product` (
+                  `id` int(200) NOT NULL AUTO_INCREMENT,
+                  `product_name` varchar(100) NOT NULL,
+                  `outline` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="request">
+                CREATE TABLE `request` (
+                  `id` int(200) NOT NULL AUTO_INCREMENT,
+                  `matrial_type` varchar(100) NOT NULL,
+                  `amount` int(100) NOT NULL,
+                  `date` date NOT NULL,
+                  `exchange_matrial` varchar(100) NOT NULL,
+                  `customer_id` int(11) NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `customer_foregin_key` (`customer_id`),
+                  CONSTRAINT `customer_foregin_key` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="staff">
+                CREATE TABLE `staff` (
+                  `id` int(200) NOT NULL AUTO_INCREMENT,
+                  `first_name` varchar(100) NOT NULL,
+                  `last_name` varchar(100) NOT NULL,
+                  `role` varchar(20) DEFAULT NULL,
+                  `email` varchar(200) NOT NULL,
+                  `password` varchar(100) NOT NULL,
+                  `gender` varchar(100) NOT NULL,
+                  `position` varchar(100) NOT NULL,
+                  `salary` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`) USING BTREE
+                ) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'recycle'
+    -->
+    <database name="recycle">
+        <!-- Table customer -->
+        <table name="customer">
+            <column name="id">2</column>
+            <column name="first_name">Alaa</column>
+            <column name="last_name">mohamed</column>
+            <column name="email">alaamohamed56784@gmail.com</column>
+            <column name="password">Gdfghju5678</column>
+            <column name="address">fghj6789</column>
+            <column name="city">Cairo</column>
+            <column name="area">Ain Shams</column>
+            <column name="zip">11772</column>
+            <column name="phone">0103456789</column>
+            <column name="image">g5.jpg</column>
+        </table>
+        <table name="customer">
+            <column name="id">3</column>
+            <column name="first_name">Ahmed</column>
+            <column name="last_name">ali</column>
+            <column name="email">ahmedalli456@gmail.com</column>
+            <column name="password">567sdfghjDFG</column>
+            <column name="address">fghjrtyui678</column>
+            <column name="city">Alexandria</column>
+            <column name="area">Abees</column>
+            <column name="zip">33742</column>
+            <column name="phone">01245678789</column>
+            <column name="image">author.png</column>
+        </table>
+        <table name="customer">
+            <column name="id">4</column>
+            <column name="first_name">Reem</column>
+            <column name="last_name">ahmed</column>
+            <column name="email">reemahmed678@gmail.com</column>
+            <column name="password">56dfgDD</column>
+            <column name="address">fghjerty5678</column>
+            <column name="city">Giza</column>
+            <column name="area">Al Wahat</column>
+            <column name="zip">100</column>
+            <column name="phone">010345678</column>
+            <column name="image">g6.jpg</column>
+        </table>
+        <table name="customer">
+            <column name="id">5</column>
+            <column name="first_name">mohamed</column>
+            <column name="last_name">remy</column>
+            <column name="email">mohamedremy67890@gmail.com</column>
+            <column name="password">fghjYUJIK678</column>
+            <column name="address">fghj56789</column>
+            <column name="city">Giza</column>
+            <column name="area">6th of October</column>
+            <column name="zip">12563</column>
+            <column name="phone">01256789</column>
+            <column name="image">c1.png</column>
+        </table>
+        <table name="customer">
+            <column name="id">6</column>
+            <column name="first_name">rania</column>
+            <column name="last_name">ahmed</column>
+            <column name="email">raniaahmed8768@gmail.com</column>
+            <column name="password">55Email</column>
+            <column name="address">tyu67cvghj</column>
+            <column name="city">Alexandria</column>
+            <column name="area">Glem</column>
+            <column name="zip">21619</column>
+            <column name="phone">011345678</column>
+            <column name="image">g2.jpg</column>
+        </table>
+        <table name="customer">
+            <column name="id">7</column>
+            <column name="first_name">Ramy</column>
+            <column name="last_name">mohamed</column>
+            <column name="email">ramymohamed56789@gmail.com</column>
+            <column name="password">dfghj5678SD</column>
+            <column name="address">ghjk5678gh</column>
+            <column name="city">Alexandria</column>
+            <column name="area">Mandara</column>
+            <column name="zip">21923</column>
+            <column name="phone">012456789</column>
+            <column name="image">c3.png</column>
+        </table>
+        <table name="customer">
+            <column name="id">8</column>
+            <column name="first_name">Tarek</column>
+            <column name="last_name">ahmed</column>
+            <column name="email">tarekahmed4567@gmail.com</column>
+            <column name="password">fghj56789SD</column>
+            <column name="address">rtyui5678cvb</column>
+            <column name="city">Cairo</column>
+            <column name="area">Al Rehab</column>
+            <column name="zip">11841</column>
+            <column name="phone">0103456789</column>
+            <column name="image">blog_3.png</column>
+        </table>
+        <!-- Table product -->
+        <table name="product">
+            <column name="id">1</column>
+            <column name="product_name">wood</column>
+            <column name="outline">200 KG</column>
+        </table>
+        <table name="product">
+            <column name="id">2</column>
+            <column name="product_name">paper</column>
+            <column name="outline">700 KG</column>
+        </table>
+        <table name="product">
+            <column name="id">3</column>
+            <column name="product_name">Metal</column>
+            <column name="outline">600 KG</column>
+        </table>
+        <table name="product">
+            <column name="id">5</column>
+            <column name="product_name">Glass</column>
+            <column name="outline">0 KG</column>
+        </table>
+        <table name="product">
+            <column name="id">6</column>
+            <column name="product_name">Plastic</column>
+            <column name="outline">400 KG</column>
+        </table>
+        <!-- Table request -->
+        <table name="request">
+            <column name="id">18</column>
+            <column name="matrial_type">metal</column>
+            <column name="amount">30</column>
+            <column name="date">2021-04-08</column>
+            <column name="exchange_matrial">Plactic</column>
+            <column name="customer_id">2</column>
+        </table>
+        <table name="request">
+            <column name="id">22</column>
+            <column name="matrial_type">glass</column>
+            <column name="amount">60</column>
+            <column name="date">2021-04-15</column>
+            <column name="exchange_matrial">None</column>
+            <column name="customer_id">5</column>
+        </table>
+        <table name="request">
+            <column name="id">23</column>
+            <column name="matrial_type">paper</column>
+            <column name="amount">90</column>
+            <column name="date">2021-04-18</column>
+            <column name="exchange_matrial">Metal</column>
+            <column name="customer_id">4</column>
+        </table>
+        <table name="request">
+            <column name="id">24</column>
+            <column name="matrial_type">plastic</column>
+            <column name="amount">70</column>
+            <column name="date">2021-04-17</column>
+            <column name="exchange_matrial">Metal</column>
+            <column name="customer_id">7</column>
+        </table>
+        <table name="request">
+            <column name="id">25</column>
+            <column name="matrial_type">glass</column>
+            <column name="amount">50</column>
+            <column name="date">2021-04-17</column>
+            <column name="exchange_matrial">Peper</column>
+            <column name="customer_id">8</column>
+        </table>
+        <table name="request">
+            <column name="id">26</column>
+            <column name="matrial_type">plastic</column>
+            <column name="amount">78</column>
+            <column name="date">2021-04-09</column>
+            <column name="exchange_matrial">None</column>
+            <column name="customer_id">3</column>
+        </table>
+        <table name="request">
+            <column name="id">27</column>
+            <column name="matrial_type">paper</column>
+            <column name="amount">89</column>
+            <column name="date">2021-04-09</column>
+            <column name="exchange_matrial">Metal</column>
+            <column name="customer_id">6</column>
+        </table>
+        <!-- Table staff -->
+        <table name="staff">
+            <column name="id">1</column>
+            <column name="first_name">Sara</column>
+            <column name="last_name">Mohamed</column>
+            <column name="role">admin</column>
+            <column name="email">smohamedamer4@gmail.com</column>
+            <column name="password">55Email</column>
+            <column name="gender">femail</column>
+            <column name="position">Full stack web developer</column>
+            <column name="salary">5657$</column>
+        </table>
+        <table name="staff">
+            <column name="id">2</column>
+            <column name="first_name">Ashton</column>
+            <column name="last_name">Cox</column>
+            <column name="role">worker</column>
+            <column name="email">e.shtonl@gmail.com</column>
+            <column name="password">546ohgI46</column>
+            <column name="gender">male</column>
+            <column name="position">Junior Technical Author</column>
+            <column name="salary">350$</column>
+        </table>
+        <table name="staff">
+            <column name="id">3</column>
+            <column name="first_name">Brenden</column>
+            <column name="last_name">Wagner</column>
+            <column name="role">worker</column>
+            <column name="email">dengner@gmail.com</column>
+            <column name="password">SoftwgI46546oh</column>
+            <column name="gender">female</column>
+            <column name="position">Software Engineer</column>
+            <column name="salary">47000$</column>
+        </table>
+        <table name="staff">
+            <column name="id">4</column>
+            <column name="first_name">Charde</column>
+            <column name="last_name">Marshall</column>
+            <column name="role">worker</column>
+            <column name="email">elhamai.core@gmail.com</column>
+            <column name="password">Region6546oh</column>
+            <column name="gender">male</column>
+            <column name="position">Regional Director</column>
+            <column name="salary">47000$</column>
+        </table>
+        <table name="staff">
+            <column name="id">5</column>
+            <column name="first_name">Colleen</column>
+            <column name="last_name">Hurst</column>
+            <column name="role">admin</column>
+            <column name="email">en.olleemai@gmail.com</column>
+            <column name="password">JarigI46546ohvasc</column>
+            <column name="gender">male</column>
+            <column name="position">Javascript Developer</column>
+            <column name="salary">2000$</column>
+        </table>
+        <table name="staff">
+            <column name="id">6</column>
+            <column name="first_name">Fiona</column>
+            <column name="last_name">Green</column>
+            <column name="role">worker</column>
+            <column name="email">aliona.F.Green@gmail.com</column>
+            <column name="password">Ope6546oieh</column>
+            <column name="gender">female</column>
+            <column name="position">Chief Operating Officer (COO)</column>
+            <column name="salary">800$</column>
+        </table>
+        <table name="staff">
+            <column name="id">7</column>
+            <column name="first_name">Finn</column>
+            <column name="last_name">Camacho</column>
+            <column name="role">admin</column>
+            <column name="email">alnama.choem@gmail.com</column>
+            <column name="password">SuporgI46ohp</column>
+            <column name="gender">female</column>
+            <column name="position">Support Engineer</column>
+            <column name="salary">8700$</column>
+        </table>
+        <table name="staff">
+            <column name="id">8</column>
+            <column name="first_name">Gavin</column>
+            <column name="last_name">Cortez</column>
+            <column name="role">worker</column>
+            <column name="email">ola.lnamhion@gmail.com</column>
+            <column name="password">Teg46o</column>
+            <column name="gender">male</column>
+            <column name="position">distributor</column>
+            <column name="salary">23500$</column>
+        </table>
+        <table name="staff">
+            <column name="id">9</column>
+            <column name="first_name">Herrod</column>
+            <column name="last_name">Chandler</column>
+            <column name="role">worker</column>
+            <column name="email">Fireen.nam@gmail.com</column>
+            <column name="password">S46546ohagI</column>
+            <column name="gender">male</column>
+            <column name="position">Sales Assistant</column>
+            <column name="salary">130$</column>
+        </table>
+        <table name="staff">
+            <column name="id">10</column>
+            <column name="first_name">Hope</column>
+            <column name="last_name">Fuentes</column>
+            <column name="role">worker</column>
+            <column name="email">HopeFuentes1@gmail.com</column>
+            <column name="password">SegI4h6546o</column>
+            <column name="gender">male</column>
+            <column name="position">Secretary</column>
+            <column name="salary">13500$</column>
+        </table>
+        <table name="staff">
+            <column name="id">11</column>
+            <column name="first_name">Heppa</column>
+            <column name="last_name">Fuenteso</column>
+            <column name="role">worker</column>
+            <column name="email">Fire.hala1256@gmail.com</column>
+            <column name="password">Segn6croh</column>
+            <column name="gender">female</column>
+            <column name="position">Secretary</column>
+            <column name="salary">13700$</column>
+        </table>
+        <table name="staff">
+            <column name="id">12</column>
+            <column name="first_name">Houent</column>
+            <column name="last_name">Fespe</column>
+            <column name="role">worker</column>
+            <column name="email">Firn.name@gmail.com</column>
+            <column name="password">gI46ohry</column>
+            <column name="gender">male</column>
+            <column name="position">Secretary</column>
+            <column name="salary">13500$</column>
+        </table>
+        <table name="staff">
+            <column name="id">13</column>
+            <column name="first_name">Hoen</column>
+            <column name="last_name">Fu</column>
+            <column name="role">worker</column>
+            <column name="email">ireea.doof@gmail.com</column>
+            <column name="password">gI546ohary46</column>
+            <column name="gender">female</column>
+            <column name="position">Secretary</column>
+            <column name="salary">137500$</column>
+        </table>
+        <table name="staff">
+            <column name="id">14</column>
+            <column name="first_name">Ghade</column>
+            <column name="last_name">Ahmed</column>
+            <column name="role">worker</column>
+            <column name="email">hsudhe86868@gmail.com</column>
+            <column name="password">fgh567fghj</column>
+            <column name="gender">female</column>
+            <column name="position">distributer</column>
+            <column name="salary">173456$</column>
+        </table>
+        <table name="staff">
+            <column name="id">15</column>
+            <column name="first_name">Jennifer</column>
+            <column name="last_name">Loren</column>
+            <column name="role">worker</column>
+            <column name="email">Jenniferloren@gmail.com</column>
+            <column name="password">buih78ghj89</column>
+            <column name="gender">female</column>
+            <column name="position">Software Engineer</column>
+            <column name="salary">64896$</column>
+        </table>
+        <table name="staff">
+            <column name="id">58</column>
+            <column name="first_name">mena</column>
+            <column name="last_name">mohamed</column>
+            <column name="role">admin</column>
+            <column name="email">sdfghj5678@gmail.com</column>
+            <column name="password">4567fgh</column>
+            <column name="gender">male</column>
+            <column name="position">Backend developer</column>
+            <column name="salary">5678</column>
+        </table>
+    </database>
+</pma_xml_export>

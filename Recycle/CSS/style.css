@@ -1,0 +1,313 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    overflow: hidden;
+}
+
+/*loading screen*/
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #22aa86;
+}
+.spinner {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .spinner > div {
+    background-color: #fff;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+/*end loading screen*/
+
+/*angle-up*/
+.angle {
+    display: none;
+}
+
+.angle-up {
+    background-color: #22aa86;
+    font-size: 0.9rem;
+    bottom: 3%;
+    right: 2%;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+}
+@media screen and (max-width: 800px){
+    .angle-up{
+        bottom: 12%;
+    }
+}
+/*end angle-up*/
+
+/*side bar*/
+#sideBar{
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    z-index: 2;
+}
+#colorsBox{
+    padding: 15px;
+}
+.color-item{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+#colorsBox .one {
+    background-color: #181626;
+}
+#colorsBox .two {
+    background-color: #BA120E;
+}
+#colorsBox .three {
+    background-color: #555;
+}
+#colorsBox .four {
+    background-color: #027368;
+}
+#sideBarToggle{
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+
+}
+/*end side bar*/
+
+/*header*/
+header {
+    background-image: url(../Images/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70%;
+}
+header .layer {
+    background-color: rgba(0, 0, 0, .5);
+}
+header .layer .caption {
+    font-size: 1.1rem;
+    background-color: rgba(156, 192, 38, 0.9);
+}
+/*end header*/
+
+/*about section*/
+.about .item i, .services .items .item i {
+    font-size: 2.5rem;
+    color: #22aa86;
+    cursor: pointer;
+}
+.about .item h4, .services .items .item h4 {
+    font-size: 1.1rem;
+}
+.about .item p, .services .items .item p {
+    font-size: 0.8rem;
+}
+.about .caption h3, .services .items .caption h3 {
+    color: #22aa86;
+}
+.about .caption .secP, .services .items .caption .secP {
+    font-size: .8rem;
+}
+.about .caption .right i {
+    font-size: 1.2rem;
+    color: #22aa86;
+}
+.about .caption .right p{
+    font-size: .8rem;
+}
+/*end about*/
+
+/*services section*/
+.services .recycle-man {
+    background-image: url(../Images/recycle-man.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 70%;
+}
+.services .recycle-man .caption {
+    font-size: 1.2rem;
+    background-color: rgba(156, 192, 38, 0.9);
+}
+.services .recycle-man .caption h2 {
+    font-size: 2.5rem;
+}
+.services .materials h2 {
+    color: #22aa86;
+    font-size: 2.5rem;
+}
+/*end services*/
+
+/*why section*/
+.why {
+    background-color: #EEE;
+}
+.why .left .firP {
+    font-size: 1.2rem;
+}
+.why .left .secP {
+    font-size: 0.8rem;
+}
+.why .left .button {
+    background-color: #22aa86;
+    width: 65%;
+    padding: 10px;
+    cursor: pointer;
+}
+.why .left .button:hover {
+    background-color: #1e9777;
+}
+.why .left .button a {
+    text-decoration: none;
+}
+.why .right .prog {
+    height: 10px;
+    background-color: #DDD;
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.why .right .prog div {
+    width: 1%;
+}
+
+.why .right .prog .green {
+    background-color: #22aa86;
+}
+.why .right .prog .orange {
+    background-color: #f77a25;
+}
+.why .right .prog .green2 {
+    background-color: #9CC026;
+}
+.why .right .prog .blue {
+    background-color: #228aaa;
+}
+
+/*testimonials*/
+.carousel-inner .carousel-item .content h6 {
+    color: #22aa86;
+}
+.carousel-item .content .env {
+    font-size: 0.8rem;
+}
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    background-color: #22aa86;
+}
+.why .testimonials h3 {
+    font-size: 2.5rem;
+    color: #22aa86;
+}
+.why .testimonials .carousel-item .img3 {
+    width: 150px;
+    height: 150px;
+}
+/*end why*/
+
+/*contact section*/
+.contact .left .text, .contact .left .caption .secP {
+    font-size: 0.8rem;
+}
+.contact .left i {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+.contact .left .phone {
+    background-color: #9CC026;
+    transform: rotate(90deg);
+}
+.contact .left .clock {
+    background-color: #22aa86;
+}
+.contact .left .map {
+    background-color: #44514e;
+}
+.contact .right ::placeholder, .contact .right textarea {
+    font-size: 0.8rem;
+}
+.contact .right input {
+    padding: 25px 20px;
+    border-radius: 2px !important;
+}
+.contact .right textarea {
+    border-radius: 2px !important;
+}
+.contact .right .btn {
+    background-color: #22aa86;
+    padding: 10px 20px;
+}
+.contact .right .btn:hover {
+    background-color: #1e9777;
+}
+/*end contact*/
+
+/*footer*/
+footer .copy p, footer .copy span {
+    font-size: 0.75rem;
+}
+footer .copy .icons a {
+    z-index: 3;
+    text-decoration: none;
+}
+footer .copy .icons i {
+    width: 35px;
+    height: 35px;
+    margin-left: 2px;
+    background-color: #44514e;
+    cursor: pointer;
+}
+/*end footer*/
